@@ -13,7 +13,7 @@ export default async function ExpertsPage() {
   return (
     <>
       <PageHeader title={c["experts.title"]} intro={c["experts.intro"]} />
-      <Container className="py-14 sm:py-16">
+      <Container className="py-10 sm:py-16">
         <ArticleGrid articles={articles} showAuthor emptyText="עדיין לא פורסמו מאמרים של אנשי מקצוע." />
         <div className="mt-16 flex flex-col items-start gap-4 border-t border-stone pt-10 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-lg text-navy">{c["experts.cta"]}</p>

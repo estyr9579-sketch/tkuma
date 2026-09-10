@@ -102,3 +102,19 @@ h1, h2, h3, h4 {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* Subtle reveal on scroll (fade + 10px slide). Disabled with reduced-motion below. */
+.reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+/* Progressive enhancement: if JS never runs, content must still be visible */
+html:not(.js) .reveal { opacity: 1; transform: none; }

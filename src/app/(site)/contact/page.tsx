@@ -11,7 +11,7 @@ export default async function ContactPage() {
   return (
     <>
       <PageHeader title={c["contact.title"]} intro={c["contact.text"]} />
-      <Container className="py-16 sm:py-20">
+      <Container className="py-10 sm:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr]">
           <div className="max-w-xl">
             <ContactForm submitLabel={c["contact.submit"]} consentText={c["contact.consent"]} successTitle={c["contact.success.title"]} successText={c["contact.success.text"]} />

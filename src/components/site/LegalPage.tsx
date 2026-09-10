@@ -5,7 +5,7 @@ export function LegalPage({ title, updated, sections }: { title: string; updated
   return (
     <>
       <PageHeader title={title} intro={`עודכן לאחרונה: ${updated}`} />
-      <Container narrow className="py-16">
+      <Container narrow className="py-10 sm:py-16">
         <div className="space-y-10">
           {sections.map((s) => (
             <section key={s.h}>

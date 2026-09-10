@@ -15,7 +15,7 @@ export default async function ArticlesPage({ searchParams }: { searchParams: Pro
   return (
     <>
       <PageHeader title={c["articles.title"]} intro={c["articles.intro"]} />
-      <Container className="py-14 sm:py-16">
+      <Container className="py-10 sm:py-16">
         <nav aria-label="סינון לפי קטגוריה" className="mb-10 flex flex-wrap gap-2">
           <Link href="/articles" aria-current={!category ? "page" : undefined} className={`rounded-sm border px-4 py-1.5 text-sm ${!category ? "border-navy bg-navy text-white" : "border-stone text-ink hover:border-navy"}`}>הכל</Link>
           {cats.map((cat) => (
