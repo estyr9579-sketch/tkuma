@@ -11,6 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description: c["site.tagline"],
     openGraph: { type: "website", locale: "he_IL", siteName: c["site.name"], title: c["site.name"], description: c["site.tagline"] },
     robots: { index: true, follow: true },
+    verification: process.env.GOOGLE_SITE_VERIFICATION ? { google: process.env.GOOGLE_SITE_VERIFICATION } : undefined,
   };
 }
 
